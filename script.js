@@ -104,7 +104,7 @@ function handleLogin(e) {
      'email': email
    });
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
-        showHomepage();
+        //showHomepage();
     } else {
         alert('Invalid email or password!');
     }
