@@ -112,6 +112,12 @@ function handleLogin(e) {
 
 // Logout handler
 function handleLogout() {
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+     'event': 'logout',  // Custom event for registration
+     'email': email
+   });
     currentUser = null;
     cart = [];
     localStorage.removeItem('currentUser');
