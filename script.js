@@ -65,6 +65,16 @@ function handleRegister(e) {
         alert('User with this email already exists!');
         return;
     }
+
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+     'event': 'user_registration',  // Custom event for registration
+     'name': name,
+     'email': email,
+     'phone': phone
+   });
+
     
     // Create new user
     const newUser = { name, email, phone, password };
