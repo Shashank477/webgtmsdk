@@ -82,7 +82,7 @@ function handleRegister(e) {
     localStorage.setItem('users', JSON.stringify(users));
     
     alert('Registration successful! Please login.');
-    //showLoginForm();
+    showLoginForm();
 }
 
 // Login handler
@@ -104,7 +104,7 @@ function handleLogin(e) {
      'email': email
    });
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
-        //showHomepage();
+        showHomepage();
     } else {
         alert('Invalid email or password!');
     }
