@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">ShopEasy</h1>
+            <div class="nav-menu">
+                <span id="cart-count" class="cart-count">Cart (0)</span>
+                <button id="logout-btn" class="logout-btn" style="display: none;">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Registration Form -->
+    <div id="register-form" class="form-container">
+        <div class="form-box">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <div class="input-group">
+                    <input type="text" id="reg-name" placeholder="Full Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="reg-email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="tel" id="reg-phone" placeholder="Phone Number" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="reg-password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <p class="switch-form">Already have an account? <a href="#" id="show-login">Login here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Login Form -->
+    <div id="login-form" class="form-container" style="display: none;">
+        <div class="form-box">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="email" id="login-email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="login-password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p class="switch-form">Don't have an account? <a href="#" id="show-register">Register here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Homepage -->
+    <div id="homepage" class="homepage" style="display: none;">
+        <div class="welcome-section">
+            <h2 id="welcome-message">Welcome to ShopEasy!</h2>
+        </div>
+        
+        <div class="products-section">
+            <h3>Our Products</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x200?text=Laptop" alt="Laptop">
+                    <h4>Gaming Laptop</h4>
+                    <p class="price">$899.99</p>
+                    <button class="add-to-cart" data-product="Gaming Laptop" data-price="899.99">Add to Cart</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x200?text=Phone" alt="Smartphone">
+                    <h4>Smartphone</h4>
+                    <p class="price">$699.99</p>
+                    <button class="add-to-cart" data-product="Smartphone" data-price="699.99">Add to Cart</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x200?text=Headphones" alt="Headphones">
+                    <h4>Wireless Headphones</h4>
+                    <p class="price">$199.99</p>
+                    <button class="add-to-cart" data-product="Wireless Headphones" data-price="199.99">Add to Cart</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x200?text=Watch" alt="Smartwatch">
+                    <h4>Smart Watch</h4>
+                    <p class="price">$299.99</p>
+                    <button class="add-to-cart" data-product="Smart Watch" data-price="299.99">Add to Cart</button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x200?text=Camera" alt="Camera">
+                    <h4>Digital Camera</h4>
+                    <p class="price">$799.99</p>
+                    <button class="add-to-cart" data-product="Digital Camera" data-price="799.99">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong>Total: $<span id="cart-total">0.00</span></strong>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
