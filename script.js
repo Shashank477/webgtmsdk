@@ -115,8 +115,7 @@ function handleLogout() {
 
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-     'event': 'logout',  // Custom event for registration
-     'email': email
+     'event': 'logout'  // Custom event for registration
    });
     currentUser = null;
     cart = [];
