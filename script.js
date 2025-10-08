@@ -82,7 +82,7 @@ function handleRegister(e) {
     localStorage.setItem('users', JSON.stringify(users));
     
     alert('Registration successful! Please login.');
-    showLoginForm();
+    //showLoginForm();
 }
 
 // Login handler
