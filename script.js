@@ -142,6 +142,14 @@ function addToCart(e) {
             quantity: 1
         });
     }
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'event': 'add_to_cart',  // Custom event for registration
+        'product_name': productName,
+        'product_price': productPrice
+   });
+
     
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
