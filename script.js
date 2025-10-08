@@ -91,12 +91,18 @@ function handleLogin(e) {
     
     const email = document.getElementById('login-email').value;
     const password = document.getElementById('login-password').value;
+    window.dataLayer = window.dataLayer || [];
     
     // Find user
     const user = users.find(u => u.email === email && u.password === password);
     
     if (user) {
         currentUser = user;
+        
+    window.dataLayer.push({
+     'event': 'user_login',  // Custom event for registration
+     'email': email
+   });
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         showHomepage();
     } else {
